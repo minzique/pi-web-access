@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+- Recognize Exa's `Unknown tool: get_code_context_exa` response when falling back to web search; keep unrelated provider errors visible.
+
 ## [0.10.7] - 2026-05-02
 
 ### Added

@@ -9,7 +9,8 @@ let codeContextToolMissing = false;
 
 function isMissingMcpToolError(message: string): boolean {
 	const normalized = message.toLowerCase();
-	return normalized.includes("tool") && normalized.includes("not found");
+	return normalized.includes(CODE_CONTEXT_TOOL)
+		&& (normalized.includes("unknown tool") || (normalized.includes("tool") && normalized.includes("not found")));
 }
 
 function buildFallbackQuery(query: string): string {
